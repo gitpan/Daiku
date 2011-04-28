@@ -21,7 +21,8 @@ no_index:
     - xt
 requires:
   Mouse: 0.92
+  parent: 0
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01
+version: 0.02
