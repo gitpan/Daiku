@@ -1,0 +1,97 @@
+{
+   "abstract" : "Make for Perl",
+   "author" : [
+      "Tokuhiro Matsuno <tokuhirom AAJKLFJEF GMAIL COM>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Minilla/v0.7.0",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Daiku",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "CPAN::Meta" : "0",
+            "CPAN::Meta::Prereqs" : "0",
+            "Module::Build" : "0.38"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion" : "0.10108",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.7"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Mouse" : "0.92",
+            "Mouse::Role" : "0",
+            "Scalar::Util" : "0",
+            "Time::HiRes" : "1.9701",
+            "parent" : "0",
+            "perl" : "5.008001"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Fatal" : "0",
+            "File::Temp" : "0",
+            "Test::More" : "0.98"
+         }
+      }
+   },
+   "provides" : {
+      "Daiku" : {
+         "file" : "lib/Daiku.pm",
+         "version" : "0.05"
+      },
+      "Daiku::File" : {
+         "file" : "lib/Daiku/File.pm"
+      },
+      "Daiku::Registry" : {
+         "file" : "lib/Daiku/Registry.pm"
+      },
+      "Daiku::Role" : {
+         "file" : "lib/Daiku/Role.pm"
+      },
+      "Daiku::SuffixRule" : {
+         "file" : "lib/Daiku/SuffixRule.pm"
+      },
+      "Daiku::Task" : {
+         "file" : "lib/Daiku/Task.pm"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/tokuhirom/Daiku/issues"
+      },
+      "homepage" : "https://github.com/tokuhirom/Daiku",
+      "repository" : {
+         "url" : "git://github.com/tokuhirom/Daiku.git",
+         "web" : "https://github.com/tokuhirom/Daiku"
+      }
+   },
+   "version" : "0.05",
+   "x_contributors" : [
+      "tokuhirom <tokuhirom@gmail.com>"
+   ]
+}

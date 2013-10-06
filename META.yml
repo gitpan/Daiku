@@ -3,12 +3,15 @@ abstract: 'Make for Perl'
 author:
   - 'Tokuhiro Matsuno <tokuhirom AAJKLFJEF GMAIL COM>'
 build_requires:
-  ExtUtils::MakeMaker: 6.42
-  Test::More: 0.96
+  Fatal: 0
+  File::Temp: 0
+  Test::More: 0.98
 configure_requires:
-  ExtUtils::MakeMaker: 6.42
-distribution_type: module
-generated_by: 'Module::Install version 1.01'
+  CPAN::Meta: 0
+  CPAN::Meta::Prereqs: 0
+  Module::Build: 0.38
+dynamic_config: 0
+generated_by: 'Minilla/v0.7.0, CPAN::Meta::Converter version 2.132510'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -16,14 +19,38 @@ meta-spec:
 name: Daiku
 no_index:
   directory:
-    - inc
     - t
     - xt
+    - inc
+    - share
+    - eg
+    - examples
+    - author
+provides:
+  Daiku:
+    file: lib/Daiku.pm
+    version: 0.05
+  Daiku::File:
+    file: lib/Daiku/File.pm
+  Daiku::Registry:
+    file: lib/Daiku/Registry.pm
+  Daiku::Role:
+    file: lib/Daiku/Role.pm
+  Daiku::SuffixRule:
+    file: lib/Daiku/SuffixRule.pm
+  Daiku::Task:
+    file: lib/Daiku/Task.pm
 requires:
   Mouse: 0.92
+  Mouse::Role: 0
+  Scalar::Util: 0
   Time::HiRes: 1.9701
   parent: 0
-  perl: 5.8.1
+  perl: 5.008001
 resources:
-  license: http://dev.perl.org/licenses/
-version: 0.04
+  bugtracker: https://github.com/tokuhirom/Daiku/issues
+  homepage: https://github.com/tokuhirom/Daiku
+  repository: git://github.com/tokuhirom/Daiku.git
+version: 0.05
+x_contributors:
+  - 'tokuhirom <tokuhirom@gmail.com>'
