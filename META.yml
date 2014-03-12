@@ -30,7 +30,7 @@ no_index:
 provides:
   Daiku:
     file: lib/Daiku.pm
-    version: 0.07
+    version: 0.08
   Daiku::CLI:
     file: lib/Daiku/CLI.pm
   Daiku::Daikufile:
@@ -46,7 +46,7 @@ provides:
   Daiku::Task:
     file: lib/Daiku/Task.pm
 requires:
-  Getopt::Long: 2.38
+  Getopt::Long: 2.39
   IPC::System::Simple: 0
   Mouse: 0.92
   Mouse::Role: 0
@@ -61,7 +61,7 @@ resources:
   bugtracker: https://github.com/tokuhirom/Daiku/issues
   homepage: https://github.com/tokuhirom/Daiku
   repository: git://github.com/tokuhirom/Daiku.git
-version: 0.07
+version: 0.08
 x_contributors:
   - 'Shoichi Kaji <skaji@cpan.org>'
   - 'Tokuhiro Matsuno <tokuhirom@gmail.com>'
