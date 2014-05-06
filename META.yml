@@ -3,19 +3,18 @@ abstract: 'Make for Perl'
 author:
   - 'Tokuhiro Matsuno <tokuhirom AAJKLFJEF GMAIL COM>'
 build_requires:
-  Fatal: 0
-  File::Temp: 0
-  Test::More: 0.98
+  Capture::Tiny: '0'
+  Fatal: '0'
+  File::Temp: '0'
+  Test::More: '0.98'
 configure_requires:
-  CPAN::Meta: 0
-  CPAN::Meta::Prereqs: 0
-  Module::Build: 0.38
+  Module::Build::Tiny: '0.035'
 dynamic_config: 0
-generated_by: 'Minilla/v0.11.1, CPAN::Meta::Converter version 2.133380'
+generated_by: 'Minilla/v0.15.1, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Daiku
 no_index:
   directory:
@@ -30,7 +29,7 @@ no_index:
 provides:
   Daiku:
     file: lib/Daiku.pm
-    version: 0.08
+    version: '0.09'
   Daiku::CLI:
     file: lib/Daiku/CLI.pm
   Daiku::Daikufile:
@@ -46,22 +45,23 @@ provides:
   Daiku::Task:
     file: lib/Daiku/Task.pm
 requires:
-  Getopt::Long: 2.39
-  IPC::System::Simple: 0
-  Mouse: 0.92
-  Mouse::Role: 0
-  Pod::Usage: 0
-  Scalar::Util: 0
-  Tie::IxHash: 0
-  Time::HiRes: 1.9701
-  autodie: 0
-  parent: 0
-  perl: 5.008001
+  Getopt::Long: '2.39'
+  IPC::System::Simple: '0'
+  Mouse: '0.92'
+  Mouse::Role: '0'
+  Pod::Usage: '0'
+  Scalar::Util: '0'
+  Tie::IxHash: '0'
+  Time::HiRes: '1.9701'
+  autodie: '0'
+  parent: '0'
+  perl: '5.008001'
 resources:
   bugtracker: https://github.com/tokuhirom/Daiku/issues
   homepage: https://github.com/tokuhirom/Daiku
   repository: git://github.com/tokuhirom/Daiku.git
-version: 0.08
+version: '0.09'
 x_contributors:
   - 'Shoichi Kaji <skaji@cpan.org>'
+  - 'Songmu <y.songmu@gmail.com>'
   - 'Tokuhiro Matsuno <tokuhirom@gmail.com>'
