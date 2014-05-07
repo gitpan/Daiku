@@ -1,5 +1,14 @@
 Revision history for Perl module Daiku
 
+0.10 2014-05-07T04:38:11Z
+
+    - support namespace inspired by rake
+      (songmu)
+    - support argument of task using brackets
+      (songmu)
+    - fix bug in `daiku -T`
+      (Shoichi Kaji)
+
 0.09 2014-05-06T05:01:51Z
 
     - implement 'sh' DSL inspired by rake

@@ -2,9 +2,10 @@ package Daiku::CLI;
 use strict;
 use warnings;
 use Daiku::Daikufile;
-use Getopt::Long ();
+use Getopt::Long 2.39 ();
+use Encode qw/encode_utf8/;
 
-use Mouse;
+use Mouse 0.92;
 
 has file => (
     is      => 'rw',
@@ -74,7 +75,7 @@ sub _print_tasks {
 
     my @tasks;
     for my $task (values %$tasks) {
-        next unless defined $task->desc;
+        next unless $task->isa('Daiku::Task') && defined $task->desc;
 
         my $task_name = $task->dst;
         my $len = length $task_name;
@@ -86,7 +87,7 @@ sub _print_tasks {
     }
 
     for my $t (@tasks) {
-        printf "daiku %-${column_width}s  # %s\n", $t->{name}, $t->{desc};
+        printf "daiku %-${column_width}s  # %s\n", encode_utf8($t->{name}), encode_utf8($t->{desc});
     }
 }
 

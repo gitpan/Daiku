@@ -4,7 +4,7 @@
       "Tokuhiro Matsuno <tokuhirom AAJKLFJEF GMAIL COM>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.15.1",
+   "generated_by" : "Minilla/v0.15.2",
    "license" : [
       "perl_5"
    ],
@@ -46,12 +46,12 @@
             "IPC::System::Simple" : "0",
             "Mouse" : "0.92",
             "Mouse::Role" : "0",
+            "Parse::CommandLine" : "0",
             "Pod::Usage" : "0",
             "Scalar::Util" : "0",
             "Tie::IxHash" : "0",
             "Time::HiRes" : "1.9701",
             "autodie" : "0",
-            "parent" : "0",
             "perl" : "5.008001"
          }
       },
@@ -60,14 +60,15 @@
             "Capture::Tiny" : "0",
             "Fatal" : "0",
             "File::Temp" : "0",
-            "Test::More" : "0.98"
+            "Test::More" : "0.98",
+            "parent" : "0"
          }
       }
    },
    "provides" : {
       "Daiku" : {
          "file" : "lib/Daiku.pm",
-         "version" : "0.09"
+         "version" : "0.10"
       },
       "Daiku::CLI" : {
          "file" : "lib/Daiku/CLI.pm"
@@ -102,10 +103,10 @@
          "web" : "https://github.com/tokuhirom/Daiku"
       }
    },
-   "version" : "0.09",
+   "version" : "0.10",
    "x_contributors" : [
       "Shoichi Kaji <skaji@cpan.org>",
-      "Songmu <y.songmu@gmail.com>",
-      "Tokuhiro Matsuno <tokuhirom@gmail.com>"
+      "Tokuhiro Matsuno <tokuhirom@gmail.com>",
+      "Songmu <y.songmu@gmail.com>"
    ]
 }

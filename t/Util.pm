@@ -16,7 +16,7 @@ sub touch {
 
 
 sub tmpdir() {
-	t::Util::TmpDir->new();
+    t::Util::TmpDir->new();
 }
 
 sub slurp {
@@ -38,7 +38,7 @@ sub compile {
 
 sub write_file {
     my ($fname, $content) = @_;
-    open my $fh, '>', $fname or die "Cannot open file: $fname: $!";
+    open my $fh, '>:encoding(utf-8)', $fname or die "Cannot open file: $fname: $!";
     print({$fh} $content) or die "Cannot write file: $fname";
     close $fh or die "Cannot close file: $fname";
 }
@@ -48,18 +48,18 @@ use File::Temp qw/tempdir/;
 use Cwd;
 
 sub new {
-	my $class = shift;
-	my $self = bless {}, $class;
-	$self->{cwd} = Cwd::getcwd();
-	$self->{dir} = tempdir(CLENAUP => 1);
-	chdir($self->{dir}) or die "Cannot chdir";
-	return $self;
+    my $class = shift;
+    my $self = bless {}, $class;
+    $self->{cwd} = Cwd::getcwd();
+    $self->{dir} = tempdir(CLENAUP => 1);
+    chdir($self->{dir}) or die "Cannot chdir";
+    return $self;
 }
 
 sub DESTROY {
-	my ($self) = @_;
-	chdir($self->{cwd});
-	delete $self->{$_} for keys %$self;
+    my ($self) = @_;
+    chdir($self->{cwd});
+    delete $self->{$_} for keys %$self;
 }
 
 1;

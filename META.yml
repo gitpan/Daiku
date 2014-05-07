@@ -7,10 +7,11 @@ build_requires:
   Fatal: '0'
   File::Temp: '0'
   Test::More: '0.98'
+  parent: '0'
 configure_requires:
   Module::Build::Tiny: '0.035'
 dynamic_config: 0
-generated_by: 'Minilla/v0.15.1, CPAN::Meta::Converter version 2.140640'
+generated_by: 'Minilla/v0.15.2, CPAN::Meta::Converter version 2.141170'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -29,7 +30,7 @@ no_index:
 provides:
   Daiku:
     file: lib/Daiku.pm
-    version: '0.09'
+    version: '0.10'
   Daiku::CLI:
     file: lib/Daiku/CLI.pm
   Daiku::Daikufile:
@@ -49,19 +50,19 @@ requires:
   IPC::System::Simple: '0'
   Mouse: '0.92'
   Mouse::Role: '0'
+  Parse::CommandLine: '0'
   Pod::Usage: '0'
   Scalar::Util: '0'
   Tie::IxHash: '0'
   Time::HiRes: '1.9701'
   autodie: '0'
-  parent: '0'
   perl: '5.008001'
 resources:
   bugtracker: https://github.com/tokuhirom/Daiku/issues
   homepage: https://github.com/tokuhirom/Daiku
   repository: git://github.com/tokuhirom/Daiku.git
-version: '0.09'
+version: '0.10'
 x_contributors:
   - 'Shoichi Kaji <skaji@cpan.org>'
-  - 'Songmu <y.songmu@gmail.com>'
   - 'Tokuhiro Matsuno <tokuhirom@gmail.com>'
+  - 'Songmu <y.songmu@gmail.com>'

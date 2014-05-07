@@ -4,6 +4,7 @@ use utf8;
 use Test::More;
 use t::Util;
 use Capture::Tiny qw/capture_stdout/;
+use Encode qw/decode_utf8/;
 
 use Daiku::CLI;
 
@@ -41,6 +42,14 @@ task 'bartask' => sub {};
 
 desc 'baz';
 task 'bazz' => sub {};
+
+# make sure that file tasks are not displayed
+file 'hoge.txt' => sub {};
+# make sure that rule tasks are not displayed
+rule '.o' => '.h' => sub {};
+
+desc 'てすと';
+task 'mbyte' => sub {};
 ...
 
     my $stdout = capture_stdout {
@@ -48,9 +57,10 @@ task 'bazz' => sub {};
         is $exit, 0;
     };
 
-    is $stdout, <<'...';
+    is decode_utf8($stdout), <<'...';
 daiku footask  # foo
 daiku bazz     # baz
+daiku mbyte    # てすと
 ...
 
 };
