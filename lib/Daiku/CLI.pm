@@ -42,7 +42,7 @@ sub run {
 
     $self->file($file) if $file;
     if ($directory) {
-        chdir $directory or die "chdir $directory failed: $!";
+        chdir $directory or die "chdir $directory failed: $!\n";
     }
 
     my $engine = Daiku::Daikufile->parse($self->file);
@@ -53,10 +53,9 @@ sub run {
     }
 
     if (!@target) {
-        my $first_target = $engine->first_target
-            or die "Missing target.\n";
-        push @target, $first_target;
+        @target = ('default');
     }
+
     my $exit = 0;
     for my $target (@target) {
         eval { $engine->build($target) };

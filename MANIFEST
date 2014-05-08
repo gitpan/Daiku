@@ -30,6 +30,7 @@ t/10_desc.t
 t/11_sh.t
 t/12_argument.t
 t/12_namespace.t
+t/14_daikufile_default.t
 t/Util.pm
 xt/02_perlcritic.t
 META.yml

@@ -41,7 +41,7 @@ sub register {
 sub build {
     my ($self, $target) = @_;
     if (!defined $target) {
-        die "Missing target";
+        die "Missing target\n";
     }
 
     # parsing 'task_name[arg1 arg2]'
@@ -53,7 +53,7 @@ sub build {
     if ($task) {
         return $task->build($target, @args);
     } else {
-        die "There is no rule to build '$target'";
+        die "There is no rule to build '$target'\n";
     }
 }
 
@@ -66,12 +66,6 @@ sub find_task {
         return Daiku::File->new( dst => $target );
     }
     return undef;
-}
-
-sub first_target {
-    my $self = shift;
-    my ($target) = keys %{$self->{tasks}};
-    return $target;
 }
 
 no Mouse; __PACKAGE__->meta->make_immutable;
