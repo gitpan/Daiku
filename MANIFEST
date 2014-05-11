@@ -23,7 +23,9 @@ t/03_declare.t
 t/04_file.t
 t/05_clone.t
 t/06_chain.t
+t/06_chain_pass_argv.t
 t/07_suffix_deps.t
+t/07_suffix_deps_multi.t
 t/08_daikufile.t
 t/09_daikufile.t
 t/10_desc.t
@@ -31,6 +33,7 @@ t/11_sh.t
 t/12_argument.t
 t/12_namespace.t
 t/14_daikufile_default.t
+t/15_suffix_deps_code.t
 t/Util.pm
 xt/02_perlcritic.t
 META.yml

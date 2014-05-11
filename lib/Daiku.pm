@@ -3,7 +3,7 @@ use warnings FATAL => 'recursion';
 
 package Daiku;
 use 5.008001;
-our $VERSION = '1.00';
+our $VERSION = '1.001';
 use Daiku::Registry;
 use IPC::System::Simple ();
 
@@ -69,9 +69,10 @@ sub _file($$;&) {
 }
 
 # rule '.c' => '.o' => sub { ... };
-sub _rule($$&) {
+sub _rule($$;&) {
     my %args;
     @args{qw/dst src code/} = @_;
+    delete $args{code} unless defined $args{code};
     my $rule = Daiku::SuffixRule->new( %args );
     caller(0)->engine->register($rule);
 }
