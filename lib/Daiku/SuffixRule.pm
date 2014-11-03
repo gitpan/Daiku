@@ -26,10 +26,19 @@ has code => (
     },
 );
 
+has _dst_regex => (
+    is      => 'ro',
+    isa     => 'Regexp',
+    default => sub {
+        my $self = shift;
+        my $dst = $self->dst;
+        ref $dst && ref $dst eq 'Regexp' ? $dst : qr/\Q$dst\E$/;
+    },
+);
+
 sub match {
     my ($self, $target) = @_;
-    return 1 if $target =~ /\Q$self->{dst}\E$/;
-    return 0;
+    $target =~ $self->_dst_regex;
 }
 
 sub build {
@@ -52,15 +61,13 @@ sub _build_deps {
     my $built = 0;
     my $need_rebuild = 0;
     my @sources;
-    my @srcs = ($self->src);
-       @srcs = @{ $srcs[0] } if (ref($srcs[0]) || '') eq 'ARRAY';
-    for my $src (@srcs) {
+    for my $src (_flatten($self->src)) {
         if ( (ref($src) || '') eq 'CODE') {
             my @add_sources = _flatten($src->($target));
             push @sources, @add_sources;
         }
         else {
-            (my $source = $target) =~ s/\Q$self->{dst}\E$/$src/;
+            (my $source = $target) =~ s/@{[$self->_dst_regex]}/$src/;
             push @sources, $source;
         }
     }

@@ -34,6 +34,8 @@ t/12_argument.t
 t/12_namespace.t
 t/14_daikufile_default.t
 t/15_suffix_deps_code.t
+t/16_task_deps_multi.t
+t/17_no_import.t
 t/Util.pm
 xt/02_perlcritic.t
 META.yml
