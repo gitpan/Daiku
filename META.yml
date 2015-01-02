@@ -11,7 +11,7 @@ build_requires:
 configure_requires:
   Module::Build::Tiny: '0.035'
 dynamic_config: 0
-generated_by: 'Minilla/v2.1.1, CPAN::Meta::Converter version 2.140640'
+generated_by: 'Minilla/v2.3.0, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -30,7 +30,7 @@ no_index:
 provides:
   Daiku:
     file: lib/Daiku.pm
-    version: '1.002'
+    version: '1.003'
   Daiku::CLI:
     file: lib/Daiku/CLI.pm
   Daiku::Daikufile:
@@ -61,7 +61,7 @@ resources:
   bugtracker: https://github.com/tokuhirom/Daiku/issues
   homepage: https://github.com/tokuhirom/Daiku
   repository: git://github.com/tokuhirom/Daiku.git
-version: '1.002'
+version: '1.003'
 x_contributors:
   - 'Tokuhiro Matsuno <tokuhirom@gmail.com>'
   - 'Shoichi Kaji <skaji@cpan.org>'

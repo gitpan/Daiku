@@ -4,7 +4,7 @@
       "Tokuhiro Matsuno <tokuhirom AAJKLFJEF GMAIL COM>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v2.1.1",
+   "generated_by" : "Minilla/v2.3.0",
    "license" : [
       "perl_5"
    ],
@@ -68,7 +68,7 @@
    "provides" : {
       "Daiku" : {
          "file" : "lib/Daiku.pm",
-         "version" : "1.002"
+         "version" : "1.003"
       },
       "Daiku::CLI" : {
          "file" : "lib/Daiku/CLI.pm"
@@ -103,7 +103,7 @@
          "web" : "https://github.com/tokuhirom/Daiku"
       }
    },
-   "version" : "1.002",
+   "version" : "1.003",
    "x_contributors" : [
       "Tokuhiro Matsuno <tokuhirom@gmail.com>",
       "Shoichi Kaji <skaji@cpan.org>",
