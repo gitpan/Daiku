@@ -68,7 +68,7 @@
    "provides" : {
       "Daiku" : {
          "file" : "lib/Daiku.pm",
-         "version" : "1.003"
+         "version" : "1.004"
       },
       "Daiku::CLI" : {
          "file" : "lib/Daiku/CLI.pm"
@@ -103,7 +103,7 @@
          "web" : "https://github.com/tokuhirom/Daiku"
       }
    },
-   "version" : "1.003",
+   "version" : "1.004",
    "x_contributors" : [
       "Tokuhiro Matsuno <tokuhirom@gmail.com>",
       "Shoichi Kaji <skaji@cpan.org>",
